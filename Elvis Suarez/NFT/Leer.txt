@@ -1,0 +1,4 @@
+
+Presente inconvenientes para instalar IPFS y OpenZeppelin.
+No logre crear el archivo "NFT.sol". 
+Falte a la clase que se presentaron dichos ejemplos.

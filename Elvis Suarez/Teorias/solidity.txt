@@ -1,0 +1,7 @@
+Info Oficial Solidity: https://solidity.readthedocs.io/en/develop/
+Compilador Web Solidity: http://remix.ethereum.org/
+
+Días 21/5 y 28/5 no habrá clases. 
+Para la clase de 4/6 revisen el material correspondiente a 
+Capitulo_1: "Introduction to Smart Contracts";
+Capitulo_4: "Solidity in Depth".
