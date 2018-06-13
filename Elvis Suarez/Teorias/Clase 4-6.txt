@@ -1,0 +1,30 @@
+Para la clase del día lunes 4-6 llevar su propio equipo con:
+*En caso de que sean usuarios del S.O. Windows:
+Git (https://git-scm.com); 
+Nodejs (https://nodejs.org/)
+#En la consola de node
+npm install -g -production windows-build-tools
+
+*En caso de que deseen instalar maquina virtual (https://www.virtualbox.org) o sean usuarios de Ubuntu (https://www.ubuntu.com v18.04 LTS)
+sudo apt-get update -y && sudo apt-get upgrade -y
+install nvm https://github.com/creationix/nvm#install-script 
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+# restart bash to enable nvm
+exec bash
+# install node
+nvm install node
+# build essentials gives GCC, etc. that other tools may need. Takes a while to install
+sudo apt install build-essential python -y
+
+--------------------------------------------------------------------------------------------------------------------------
+# install Truffle & Ganache/CLI
+npm i -g truffle ganache-cli
+
+
+-------------------------------------------------
+
+La clase consistió en el desarrollo y seguimiento incremental en laboratorio de los tres ejemplos de la presentación. 
+Finalmente, se migraron en redes privadas de prueba aplicaciones que integraron el empleo de smart contracs para la lógica de negocio, el uso de tokens fungibles, tokens no fungibles y almacenamiento descentralizado sobre IPFS. 
+Pudiendo testear los requerimientos funcionales, interactuar vía consola, Metamask y navegador.
+
+Chicos, les dejo el link del repo para que suban sus trabajos, por favor no olviden ajustarse al procedimiento detallado en clase: https://bit.ly/2M3oCFh
