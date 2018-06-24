@@ -1,6 +1,7 @@
-module.exports = {
-    // See <http://truffleframework.com/docs/advanced/configuration>
+require('babel-register');
+require('babel-polyfill');
 
+module.exports = {
     networks: {
         development: {
             host: '127.0.0.1',
