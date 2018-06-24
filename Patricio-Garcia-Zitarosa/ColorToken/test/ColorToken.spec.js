@@ -13,8 +13,8 @@ contract('ColorToken', accounts => {
         const name = await colors.name();
         const symbol = await colors.symbol();
 
-        assert.equal(name, 'COLORS');
-        assert.equal(symbol, 'HEX');
+        assert.equal(name, 'COLORSTOKEN');
+        assert.equal(symbol, 'CTHUB');
     });
 
     it('has correct owner', async function() {
@@ -41,10 +41,6 @@ contract('ColorToken', accounts => {
 
             assert.equal(tokens.length, 1);
             assert.equal(tokens[(0, new web3.BigNumber(colorId))]);
-        });
-
-        it('cant mint tokens that have been minted before', async function() {
-            await expectThrow(colors.mint(colorId, { from: owner }));
         });
     });
 });
