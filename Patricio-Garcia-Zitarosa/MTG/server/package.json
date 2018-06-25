@@ -1,0 +1,19 @@
+{
+  "name": "eth-ipfs-server",
+  "version": "1.0.8",
+  "private": true,
+  "main": "truffle.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Patricio I. Garcia Zitarosa",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "express-fileupload": "^0.4.0",
+    "formidable": "^1.2.1",
+    "fs": "0.0.1-security",
+    "ipfs": "^0.28.2"
+  }
+}
