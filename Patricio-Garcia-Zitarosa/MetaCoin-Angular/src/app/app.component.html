@@ -1,0 +1,86 @@
+<section class="hero is-small is-primary is-bold">
+  <div class="hero-body">
+    <div class="container has-text-left">
+      <h5 class="title is-2">
+        Tenés
+        <span class="is-medium has-underline">{{ balance }}</span> METACOINS
+      </h5>
+
+      <div class="columns">
+        <div class="column">
+          <h5 class="subtitle is-2">
+            {{ account }}
+          </h5>
+        </div>
+        <div class="column is-one-quarter">
+          <button [disabled]="account==null" (click)="openAddress()" class="button has-underline is-danger is-rounded">
+            ETHSCAN
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <section class="articles">
+    <div class="column is-8 is-offset-2">
+      <div class="card article">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content has-text-centered">
+              <p class="title article-title">Enviar Metacoin</p>
+              <br>
+            </div>
+          </div>
+          <div class="content article-body">
+            <form #metacoinForm="ngForm">
+              <div class="field">
+                <label class="label">Monto</label>
+                <div class="control">
+                  <input [(ngModel)]="sendingAmount" class="input" type="text" placeholder="250" name="sendingAmount" required #sendingAmountModel="ngModel">
+                </div>
+                <div *ngIf="sendingAmountModel.errors && (sendingAmountModel.dirty || sendingAmountModel.touched)" class="help is-danger">
+                  <p [hidden]="!sendingAmountModel.errors.required">
+                    Se requiere un monto
+                  </p>
+                </div>
+                <div *ngIf="!sendingAmountModel.errors && (sendingAmountModel.dirty || sendingAmountModel.touched)" class="help is-danger">
+                  <p [hidden]="canBeNumber(sendingAmount)">
+                    El valor ingresado debe ser un número
+                  </p>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">A la dirección</label>
+                <div class="control">
+                  <input [(ngModel)]="recipientAddress" name="recipientAddress" class="input" type="text" placeholder="0x26b03812a01fd6fb2037a461a6a01c2fa0a90100"
+                    name="recipientAddress" required #recipientAddressModel="ngModel"> </div>
+                <div *ngIf="recipientAddressModel.errors && (recipientAddressModel.dirty || recipientAddressModel.touched)" class="help is-danger">
+                  <p [hidden]="!recipientAddressModel.errors.required">
+                    Se requiere una dirección
+                  </p>
+                </div>
+                <div *ngIf="!recipientAddressModel.errors && (recipientAddressModel.dirty || recipientAddressModel.touched)" class="help is-danger">
+                  <p [hidden]="canBeNumber(recipientAddress)">
+                    El valor ingresado debe ser un número
+                  </p>
+                </div>
+              </div>
+              <div class="columns is-pulled-right">
+                <div class="field is-grouped">
+                  <p class="control">
+                    <br>
+                    <button [disabled]="!metacoinForm.valid" (click)="sendCoin()" class="button is-info is-link">
+                      Enviar
+                    </button>
+                  </p>
+                </div>
+              </div>
+              <br>
+              <br>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>

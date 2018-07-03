@@ -1,0 +1,17 @@
+{
+    "name": "smart-contracts",
+    "version": "1.0.8",
+    "private": true,
+    "main": "truffle-config.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Patricio I. Garcia Zitarosa",
+    "license": "ISC",
+    "dependencies": {
+        "openzeppelin-solidity": "^1.9.0"
+    }
+}
